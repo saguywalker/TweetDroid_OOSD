@@ -18,13 +18,17 @@ import twitter4j.conf.ConfigurationBuilder;
 
 public class TweetTUI extends AppCompatActivity {
 
+    //twitter api key
     private static final String API_KEY = "";
     private static final String API_SECRET = "";
     private static final String ACCESS_TOKEN = "";
     private static final String ACCESS_TOKEN_SECRET = "";
+
     private Button mButton;
     private EditText mEditText;
     private TextView mTextView;
+
+    //twitter4j
     public ConfigurationBuilder cb;
     public TwitterFactory factory;
     public static Twitter twitter;
@@ -41,13 +45,15 @@ public class TweetTUI extends AppCompatActivity {
                 .setOAuthAccessTokenSecret(ACCESS_TOKEN_SECRET);
         factory = new TwitterFactory(cb.build());
         twitter = factory.getInstance();
+
+        //permission for network
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
+        //point variables to xml id
         mEditText = findViewById(R.id.editText);
         mButton = findViewById(R.id.button);
         mTextView = findViewById(R.id.textView);
-
-
     }
 
     public void showSearch(View view) {
@@ -69,5 +75,7 @@ public class TweetTUI extends AppCompatActivity {
             }
         }
     }
+
+
 
 }
