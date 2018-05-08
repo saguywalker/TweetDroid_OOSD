@@ -26,11 +26,13 @@ public class TweetTUI {
     }
 
     public static void printTweets(List<Tweet> t) {
+        System.out.println("Total tweets = " + t.size());
         int c = 1;
         Iterator<Tweet> it = t.iterator();
         {
             while (it.hasNext()) {
-                System.out.println(c++ + " " + it.next().getMsg());
+                Tweet tmp = it.next();
+                System.out.println(c++ + "." + tmp.getOwner() + ": " + tmp.getMsg());
             }
         }
     }
