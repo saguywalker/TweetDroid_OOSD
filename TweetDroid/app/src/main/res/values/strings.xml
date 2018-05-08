@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TweetDroid</string>
+    <string name="hint">Enter some words</string>
+    <string name="search">Search</string>
+</resources>
