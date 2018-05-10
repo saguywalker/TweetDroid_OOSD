@@ -12,40 +12,21 @@ import java.util.List;
 
 public class TweetTUI extends AppCompatActivity {
 
-    //twitter api key
     public static final String API_KEY = "";
     public static final String API_SECRET = "";
     public static final String ACCESS_TOKEN = "";
     public static final String ACCESS_TOKEN_SECRET = "";
 
-    private Button mButton;
     private EditText mEditText;
     private TextView mTextView;
 
-    //twitter4j
-    /*public ConfigurationBuilder cb;
-    public TwitterFactory factory;
-    public static Twitter twitter;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tweet_tui);
-        /*cb = new ConfigurationBuilder();
-        cb.setDebugEnabled(true)
-                .setOAuthConsumerKey(API_KEY)
-                .setOAuthConsumerSecret(API_SECRET)
-                .setOAuthAccessToken(ACCESS_TOKEN)
-                .setOAuthAccessTokenSecret(ACCESS_TOKEN_SECRET);
-        factory = new TwitterFactory(cb.build());
-        twitter = factory.getInstance();*/
 
-        //permission for network
-
-
-        //point variables to xml id
         mEditText = findViewById(R.id.editText);
-        mButton = findViewById(R.id.button);
         mTextView = findViewById(R.id.textView);
     }
 
