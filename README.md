@@ -1,2 +1,4 @@
 ﻿# TweetDroid_OOSD
-for CSC319 Object Oriented Software Design
+﻿# For CSC319 Object Oriented Software Design
+ TweetTUI = Text-based user interface
+ TweetDroid = Android application
